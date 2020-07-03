@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="myBaseNavigationStyle">
+        <item name="skin_color">#fff</item>
+        <item name="text_color">#000</item>
+        <item name="icon_left">@string/icon_back</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <!--弹窗动画-->
+    <style name="dialog_up_down_style" parent="android:Animation">
+        <!--//进入时的动画-->
+        <item name="android:windowEnterAnimation">@anim/dialog_up</item>
+        <!--//退出时的动画-->
+        <item name="android:windowExitAnimation">@anim/dialog_down</item>
+    </style>
+</resources>

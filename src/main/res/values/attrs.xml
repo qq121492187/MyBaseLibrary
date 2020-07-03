@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MultipleStatusView">
+        <attr name="loadingView" format="reference"/>
+        <attr name="errorView" format="reference"/>
+        <attr name="emptyView" format="reference"/>
+        <attr name="noNetworkView" format="reference"/>
+        <attr name="contentView" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="IconTextView">
+        <attr name="use_font" format="string"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="FontTextView">
+        <attr name="font_style">
+            <flag name="regular" value="0" />
+            <flag name="light" value="1" />
+            <flag name="medium" value="2" />
+            <flag name="bold" value="3" />
+        </attr>
+        <attr name="text_bgColor" format="color" /><!--背景颜色-->
+        <attr name="text_borderWidth" format="dimension" /><!--边框宽度-->
+        <attr name="text_borderColor" format="color" /><!--边框颜色-->
+        <attr name="text_radius" format="float" /><!--圆角-->
+        <attr name="text_top_left_radius" format="float" /><!--圆角左上-->
+        <attr name="text_top_right_radius" format="float" /><!--圆角右上-->
+        <attr name="text_bottom_left_radius" format="float" /><!--圆角左下-->
+        <attr name="text_bottom_right_radius" format="float" /><!--圆角右下-->
+        <attr name="text_shape">
+            <enum name="rectangle" value="0" /><!--矩形（圆角矩形）-->
+            <enum name="oval" value="1" /><!--椭圆，圆-->
+            <enum name="line" value="2" /><!--线-->
+            <enum name="ring" value="3" /><!--圆环-->
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="NavigationView">
+        <attr name="skin" format="enum">
+            <enum name="green" value="0" />
+            <enum name="white" value="1" />
+            <enum name="alpha" value="2" />
+            <enum name="red" value="3" />
+        </attr>
+        <attr name="text_title" format="string" />
+        <attr name="text_left" format="string" />
+        <attr name="text_right" format="string" />
+        <attr name="text_right_second" format="string" />
+        <attr name="icon_left" format="string" />
+        <attr name="icon_right" format="string" />
+        <attr name="icon_right_second" format="string" />
+        <attr name="icon_size" format="dimension" />
+        <attr name="title_size" format="dimension" />
+        <attr name="text_size" format="dimension" />
+        <attr name="show_divider" format="boolean" />
+        <attr name="show_shadow" format="boolean" />
+        <attr name="show_icon_bg" format="boolean" />
+        <attr name="skin_color" format="color" />
+        <attr name="text_color" format="color" />
+        <attr name="icon_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="BaseButton">
+        <attr name="bgColor" format="color" /><!--背景颜色-->
+        <attr name="borderWidth" format="dimension" /><!--边框宽度-->
+        <attr name="borderColor" format="color" /><!--边框颜色-->
+        <attr name="radius" format="float" /><!--圆角-->
+        <attr name="top_left_radius" format="float" /><!--圆角左上-->
+        <attr name="top_right_radius" format="float" /><!--圆角右上-->
+        <attr name="bottom_left_radius" format="float" /><!--圆角左下-->
+        <attr name="bottom_right_radius" format="float" /><!--圆角右下-->
+        <attr name="shape">
+            <enum name="rectangle" value="0" /><!--矩形（圆角矩形）-->
+            <enum name="oval" value="1" /><!--椭圆，圆-->
+            <enum name="line" value="2" /><!--线-->
+            <enum name="ring" value="3" /><!--圆环-->
+        </attr>
+    </declare-styleable>
+</resources>

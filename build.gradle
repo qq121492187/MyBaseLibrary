@@ -1,0 +1,106 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: "kotlin-kapt"
+apply plugin: 'kotlin-android-extensions'
+
+android {
+
+    ext {
+        glideVersion = '4.9.0'
+        lifecycleVersion = '2.1.0'
+        recyclerViewVersion = '1.1.0-beta04'
+        pagingVersion = '2.1.0'
+        viewpager2Version = '1.0.0'
+        roomVersion = '2.1.0'
+        exoPlayerVersion = '2.10.5'
+    }
+
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions{
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.3.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    //jet pack
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:$android.ext.lifecycleVersion"
+    api "androidx.lifecycle:lifecycle-extensions:$android.ext.lifecycleVersion"
+    api "androidx.fragment:fragment-ktx:1.1.0"
+    api "com.github.bumptech.glide:glide:$android.ext.glideVersion"
+    api "androidx.recyclerview:recyclerview:$android.ext.recyclerViewVersion"
+    api "androidx.paging:paging-runtime:$android.ext.pagingVersion"
+    //AndroidUtilCode
+    api 'com.blankj:utilcodex:1.29.0'
+    //anko
+    api 'org.jetbrains.anko:anko-commons:0.10.8'
+    //viewpager2
+    api "androidx.viewpager2:viewpager2:$android.ext.viewpager2Version"
+
+    //network
+    api 'com.squareup.retrofit2:retrofit:2.6.1'
+    api 'com.squareup.retrofit2:converter-gson:2.6.1'
+    api 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+
+    //smart refresh
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-32'
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-32'
+    //运行时权限
+    api 'pub.devrel:easypermissions:3.0.0'
+    //状态栏
+    api 'com.jaeger.statusbarutil:library:1.5.1'
+    //tab 指示线
+    api 'com.github.hackware1993:MagicIndicator:1.5.0'
+    //shape of view
+    api 'com.github.florent37:shapeofview:1.4.7'
+    //download
+    api 'com.liulishuo.okdownload:okdownload:1.0.7'
+    api 'com.liulishuo.okdownload:okhttp:1.0.7'
+    //constraint layout 2.0
+    api 'androidx.constraintlayout:constraintlayout:2.0.0-beta7'
+    //eventBus
+    api 'org.greenrobot:eventbus:3.1.1'
+    //liveDataBus
+    api 'com.jeremyliao:live-event-bus-x:1.7.2'
+}
+
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+}

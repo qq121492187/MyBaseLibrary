@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigation_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.mybaselibrary.views.font.FontTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="65dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:id="@+id/left_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:minWidth="50dp"
+        android:orientation="horizontal">
+
+        <com.example.mybaselibrary.views.font.IconTextView
+            android:id="@+id/left_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/icon_back"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <com.example.mybaselibrary.views.font.FontTextView
+            android:id="@+id/left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:singleLine="true"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:minWidth="50dp">
+
+        <com.example.mybaselibrary.views.font.FontTextView
+            android:id="@+id/right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:singleLine="true"
+            android:visibility="gone" />
+
+        <com.example.mybaselibrary.views.font.IconTextView
+            android:id="@+id/right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right_second_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/right_layout"
+        android:gravity="center"
+        android:paddingLeft="6dp"
+        android:paddingRight="10dp">
+
+        <com.example.mybaselibrary.views.font.FontTextView
+            android:id="@+id/right_second_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:singleLine="true"
+            android:visibility="gone" />
+
+        <com.example.mybaselibrary.views.font.IconTextView
+            android:id="@+id/right_second_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/unread_num"
+        android:layout_width="9dp"
+        android:layout_height="9dp"
+        android:layout_alignTop="@id/right_layout"
+        android:layout_alignRight="@id/right_layout"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="12dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/second_unread_num"
+        android:layout_width="9dp"
+        android:layout_height="9dp"
+        android:layout_alignTop="@id/right_second_layout"
+        android:layout_alignRight="@id/right_second_layout"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="12dp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/nav_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider"
+        android:visibility="gone" />
+</RelativeLayout>
